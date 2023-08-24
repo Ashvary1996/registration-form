@@ -32,7 +32,35 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.inputboxes {
+  padding: 5px;
+  gap: 10px;
+
+}
+
+label {
+  margin-right: 10px;
+}
+
+.displaybox {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border: 2px solid red;
+
 }
