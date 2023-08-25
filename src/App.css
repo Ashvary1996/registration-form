@@ -38,29 +38,111 @@
   }
 }
 
+
+
+
+
+.navbar {
+  background-color: teal;
+  color: white;
+  height: 80px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  color: rgb(155, 236, 4);
+}
+
+.regContainer {
+  margin-top: 50px;
+}
+
+form {
+  margin: auto;
+  margin-top: 30px;
+  border: 2.4px solid teal;
+  width: 40%;
+  padding: 20px;
+  padding-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .inputboxes {
   padding: 5px;
-  gap: 10px;
+
 
 }
 
 label {
-  margin-right: 10px;
+  /* margin-right: 50px; */
+  font-weight: 500;
 }
+
+input {
+  /* width: 100%; */
+  margin-left: 40px;
+}
+
+.radio {
+  margin-left: -5px;
+
+}
+
+.submit {
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 5px;
+  border: 1px solid teal;
+
+}
+
+.submit:hover {
+  background-color: teal;
+  color: white;
+
+}
+
 
 .displaybox {
   margin: auto;
+  margin-top: 60px;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
 }
 
 .box {
   display: flex;
   flex-direction: column;
   width: 500px;
-  border: 2px solid red;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
 
+button {
+  width: 80px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+  font-weight: 500;
+
+}
+
+
+
+.pimg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
 }

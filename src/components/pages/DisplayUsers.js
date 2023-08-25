@@ -23,18 +23,25 @@ function DisplayUsers() {
       {data.map((elem, index) => {
         return (
           <div className="box" key={index}>
-            <img src={elem.src} alt="" />
-            <h3>Name : {elem.name}</h3>
-            <h4>Email : {elem.email}</h4>
-            <h3>Number : {elem.number}</h3>
-            <h3>Date of Birth : {elem.dob}</h3>
-            <h3>Gender : {elem.gender}</h3>
-            <button onClick={() => deleteItem(elem)}>Delete</button>
+            <h3 className="mx-4 d-flex my-3 rounded-circle bg-grey ">
+              <p>{index + 1}</p> <img className="pimg  " src={elem.pimg} />
+            </h3>
+            <h2 className="mx-4 text-center">Name : {elem.name}</h2>
+            <h5 className="mx-4  text-center">Email : {elem.email}</h5>
+            <h5 className="mx-4 text-center">Number : {elem.number}</h5>
+            <h5 className="mx-4 text-center">Date of Birth : {elem.dob}</h5>
+            <h5 className="mx-4 text-center">Gender : {elem.gender}</h5>
+            <button
+              className=" text-center btn btn-outline-danger"
+              onClick={() => deleteItem(elem)}
+            >
+              Delete
+            </button>
           </div>
         );
       })}
 
-      {<h1>{!data.length ? `No Register User  ` : ""}</h1>}
+      {<h1>{!data.length ? `No Register User ` : ""}</h1>}
     </div>
   );
 }

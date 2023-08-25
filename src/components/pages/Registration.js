@@ -19,46 +19,67 @@ function Registration() {
 
     setSave(saveData);
     localStorage.setItem("saveData", JSON.stringify(saveData));
+    document.getElementById("form").reset();
+
     console.log("From Submitted", data);
   };
 
   return (
-    <div className=".bg-success">
-      <form onSubmit={submitForm}>
+    <div className="regContainer .bg-success">
+      <h1>
+        <b>Registration Form</b>
+      </h1>
+      <form id="form" onSubmit={submitForm}>
         <div className="inputboxes">
           <label htmlFor="name">Name : </label>
           <input
             onChange={getValues}
             type="name"
             name="name"
-            placeholder="write your Name"
+            placeholder="your name"
           />
         </div>
+
         <div className="inputboxes">
           <label htmlFor="name">E-mail : </label>
           <input
             onChange={getValues}
             type="e-mail"
             name="email"
-            placeholder="write your email"
+            placeholder=" email address"
           />
         </div>
+
         <div className="inputboxes">
-          <label htmlFor="dob">Date Of Birth : </label>
+          <label htmlFor="dob">Date of Birth : </label>
           <input onChange={getValues} type="date" name="dob" />
         </div>
+
         <div className="inputboxes">
           <label htmlFor="number">Mobile No : </label>
           <input onChange={getValues} type="number" name="number" />
         </div>
+
         <div className="inputboxes">
           <label>Gender : </label>
 
-          <label htmlFor="gender"> Male </label>
-          <input onChange={getValues} type="radio" name="gender" value="male" />
-
-          <label htmlFor="gender"> Female</label>
+          <label htmlFor="gender" className="mx-3">
+            {" "}
+            Male{" "}
+          </label>
           <input
+            className="radio"
+            onChange={getValues}
+            type="radio"
+            name="gender"
+            value="male"
+          />
+
+          <label className="mx-2" htmlFor="gender">
+            Female
+          </label>
+          <input
+            className="radio"
             onChange={getValues}
             type="radio"
             name="gender"
@@ -66,14 +87,21 @@ function Registration() {
           />
         </div>
 
-        {/* <div className="inputboxes">
-          <input onChange={getValues} name="save" type="checkbox" />
-          <label htmlFor="gender">
-            I hearby declare all information are correct
+        <div className="inputboxes">
+          <label htmlFor="gender" className="mx-3">
+            Image Url :
           </label>
-        </div> */}
+          <input
+            className=""
+            onChange={getValues}
+            type="input"
+            name="pimg"
+            placeholder=" your profile image"
+          />
+        </div>
+
         <br />
-        <button>Submit</button>
+        <button className="submit  ">Submit</button>
       </form>
     </div>
   );
